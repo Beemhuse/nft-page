@@ -65,7 +65,7 @@ const Cards = (props: Props) => {
         >
        
           <Typography sx={{ color: "#fff" }}>{title}</Typography>
-          <Stack direction="row" spacing={1} alignItems="center" >
+          <Stack direction="row" spacing={1}  >
             {profileImage}
             <Typography sx={{ color: "#fff" }}>{imageTitle}</Typography>
           </Stack>
@@ -86,19 +86,17 @@ const Cards = (props: Props) => {
           </Box>
         </Stack>
         <motion.div  whileHover={{ scale: 0.9 }}
-                       whileTap={{ scale: 0.7 }}
-                       >
+whileTap={{ scale: 0.7 }}
+>
 
-        <Button 
-      onClick={handleOpen}
-      sx={{ background:
-                                "linear-gradient(120deg, #769593 70%, #ECB211 50%)",
-                              color: "#eee",
-
-                              px:3,
-                              fontSize:'20px', fontWeight:'600'}}>Place a bid</Button>
-                       </motion.div>
-      </Stack>
+<Button 
+onClick={handleOpen}
+sx={{ background:"linear-gradient(20deg, #769593 100%, #ECB211 50%)",
+color: "#eee",
+px:3, 
+fontSize:'20px', fontWeight:'600', textTransform:'none', width:'fit-content', marginLeft:'auto'}}>Place a bid</Button>
+</motion.div>
+</Stack>
 
     </Box>
 <ModalPop openModal={openModal} handleClose={handleClose}  title={title} />

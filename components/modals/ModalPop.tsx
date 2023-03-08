@@ -147,7 +147,7 @@ const ModalPop = (props: Props) => {
                               color: "#eee",
 
                               px:3,
-                              fontSize:'20px', fontWeight:'600'
+                              fontSize:'20px', fontWeight:'600', textTransform:'none'
                             }}
                           >
                             Place a Bid!
