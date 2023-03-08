@@ -48,7 +48,7 @@ const Cards = (props: Props) => {
       }}
       px={5}
       py={2}
-      onClick={handleOpen}
+      // onClick={handleOpen}
     >
           
       <Stack spacing={2}
@@ -92,7 +92,7 @@ const Cards = (props: Props) => {
         <Button 
       onClick={handleOpen}
       sx={{ background:
-                                "linear-gradient(220deg, #769593 10%, #ECB211 50%)",
+                                "linear-gradient(120deg, #769593 70%, #ECB211 50%)",
                               color: "#eee",
 
                               px:3,
