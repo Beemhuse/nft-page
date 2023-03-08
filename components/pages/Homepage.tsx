@@ -20,12 +20,12 @@ const Homepage = (props: Props) => {
         <Grid container sx={{ background: '#D96612', minHeight: '100vh' }} >
             <Box sx={{ background: '#ECB211', height: '40vh', width: '100%' }}>
 
+            </Box>
                 <Box sx={{
-                    marginTop: { md: "11.5rem", xs: "7.4rem", sm: "14rem" }, marginLeft: '60px', borderRadius: '10px', border: '2px solid white', width: 'fit-content', padding: '30px', background: "linear-gradient(180deg, #769593 0%, #ECB211 100%)",
+                    marginTop: { md: "-5.5rem", xs: "-5.4rem", }, marginLeft: '60px', borderRadius: '10px', border: '2px solid white', width: 'fit-content', padding: '30px', background: "linear-gradient(180deg, #769593 0%, #ECB211 100%)",
                 }}>
                     <Image src={icons.profile} alt='' />
                 </Box>
-            </Box>
             <Grid item md={12} py={3} px={{ lg: 8, xs: 4 }}>
                 <Typography sx={{ fontSize: '30px', fontWeight: '700' }}>Base</Typography>
                 <Grid container>
