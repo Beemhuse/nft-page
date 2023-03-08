@@ -80,10 +80,7 @@ const Cards = (props: Props) => {
             <Typography sx={{fontSize:'12px'}}>{currentBid}</Typography>
             <Typography sx={{fontSize:'12px'}}>{amount}</Typography>
           </Box>
-          {/* <Box >
-            <Typography sx={{fontSize:'12px'}}>{ending}</Typography>
-            <Typography sx={{fontSize:'12px'}}>{time}</Typography>
-          </Box> */}
+          
         </Stack>
         <motion.div  whileHover={{ scale: 0.9 }}
 whileTap={{ scale: 0.7 }}
