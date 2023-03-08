@@ -65,25 +65,25 @@ const Cards = (props: Props) => {
         >
        
           <Typography sx={{ color: "#fff" }}>{title}</Typography>
-          <Stack direction="row" spacing={1}  >
+          <Stack direction="row" spacing={1} alignItems='center'  >
             {profileImage}
             <Typography sx={{ color: "#fff" }}>{imageTitle}</Typography>
           </Stack>
         </Box>
         {displayImage}
-        <Stack direction="row" justifyContent={'space-between'} sx={{color:'#fff', width:'100%'}} spacing={2}>
+        <Stack direction="row" justifyContent={'space-between'} sx={{color:'#fff', width:'100%', }} spacing={2}>
           <Box>
-            <Typography>Broker:</Typography>
-            <Typography>{broker}</Typography>
+            <Typography sx={{fontSize:'12px'}}>Broker:</Typography>
+            <Typography sx={{fontSize:'12px'}}>{broker}</Typography>
           </Box>
           <Box>
-            <Typography>{currentBid}</Typography>
-            <Typography>{amount}</Typography>
+            <Typography sx={{fontSize:'12px'}}>{currentBid}</Typography>
+            <Typography sx={{fontSize:'12px'}}>{amount}</Typography>
           </Box>
-          <Box>
-            <Typography>{ending}</Typography>
-            <Typography>{time}</Typography>
-          </Box>
+          {/* <Box >
+            <Typography sx={{fontSize:'12px'}}>{ending}</Typography>
+            <Typography sx={{fontSize:'12px'}}>{time}</Typography>
+          </Box> */}
         </Stack>
         <motion.div  whileHover={{ scale: 0.9 }}
 whileTap={{ scale: 0.7 }}
