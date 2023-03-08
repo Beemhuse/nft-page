@@ -73,7 +73,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: {md:520, sm:"70%", xs:'60%'},
+  width: {md:520, sm:"80%", xs:'80%'},
   height:{xs:"auto", md:"400px"},
   // height: 500,
   background: "linear-gradient(90deg, #769593 10%, #ECB211 100%)",
@@ -131,7 +131,7 @@ const ModalPop = (props: Props) => {
                         spacing={2}
                       >
                       <Typography sx={{ color: "#eee", fontSize:'20px', fontWeight:'600' }}>Description:</Typography>
-                      <Typography sx={{ textAlign: {md:"justify", xs:'justify'}, wordSpacing:'-3px', fontSize:'15px' }}>
+                      <Typography sx={{ textAlign: {md:"justify", xs:'justify'}, fontSize:'15px' }}>
                         {description}{" "}
                       </Typography>
 
