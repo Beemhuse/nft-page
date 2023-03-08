@@ -73,12 +73,13 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 520,
+  width: {md:520, sm:"70%", xs:'60%'},
+  height:{xs:"auto", md:"400px"},
   // height: 500,
   background: "linear-gradient(90deg, #769593 10%, #ECB211 100%)",
   border: "none",
   boxShadow: 24,
-  p: 4,
+  p: {md:4, xs:2},
 };
 const ModalPop = (props: Props) => {
   const { handleClose, openModal, title } = props;
@@ -104,35 +105,41 @@ const ModalPop = (props: Props) => {
               <Box key={titled}>
                 {title === titled ? (
                   <Box>
-                    <Stack
-                      justifyContent={"space-between"}
-                      alignItems="start"
-                      spacing={1}
-                    >
-                      <Stack direction='row' alignItems='center' justifyContent='space-between' sx={{width:'100%'}}>
+                    <Stack direction='row' alignItems='center' justifyContent='space-between' sx={{width:'100%'}}>
                       <Typography sx={{ color: "#eee", fontSize:'20px', fontWeight:'600' }}>{titled} </Typography>
 <Button onClick={handleClose}>
 
 <AiOutlineClose  style={{fontSize:'30px'}} />
 </Button>
                       </Stack>
+                    <Stack
+                    direction='row'
+                      justifyContent={"space-between"}
+                      alignItems="start"
+                      spacing={1}
+                    >
+                      
+                      {/* <Stack sx={{border:'solid red'}}>
                       <Image src={displayImage} alt="" style={{width:'100%'}} />
-                      <Typography sx={{ color: "#eee", fontSize:'20px', fontWeight:'600' }}>Description:</Typography>
-                      <Typography sx={{ textAlign: "justify", fontSize:'15px' }}>
-                        {description}{" "}
-                      </Typography>
+                      
+                      </Stack> */}
                       <Stack
                         
                         // alignItems="center"
                         justifyContent={"space-between"}
-                        sx={{ width: "100%" }}
+                        sx={{ width: "100%", }}
                         spacing={2}
                       >
+                      <Typography sx={{ color: "#eee", fontSize:'20px', fontWeight:'600' }}>Description:</Typography>
+                      <Typography sx={{ textAlign: {md:"justify", xs:'justify'}, wordSpacing:'-3px', fontSize:'15px' }}>
+                        {description}{" "}
+                      </Typography>
+
                         <Box >
                           <Typography sx={{ color: "#eee", fontSize:'20px', fontWeight:'600' }}>
                            Ethereum Address :
                           </Typography>
-                          <Typography>{address} </Typography>
+                          <Typography sx={{  width:'100%', overflowWrap:'break-word'}}>{address} </Typography>
                         </Box>
                         <Link
                           href={linkTo}

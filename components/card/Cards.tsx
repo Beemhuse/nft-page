@@ -25,7 +25,6 @@ type Props = {
 
 const Cards = (props: Props) => {
   const {
-    // handleClick,
    id,
     title,
     displayImage,
@@ -48,11 +47,9 @@ const Cards = (props: Props) => {
       }}
       px={5}
       py={2}
-      // onClick={handleOpen}
     >
           
-      <Stack spacing={2}
-    >
+      <Stack spacing={2}>
         <Box
           sx={{
             display: "flex",
@@ -61,9 +58,7 @@ const Cards = (props: Props) => {
             justifyContent: "space-between",
             alignItems: "center",
           }}
-          
         >
-       
           <Typography sx={{ color: "#fff" }}>{title}</Typography>
           <Stack direction="row" spacing={1} alignItems='center'  >
             {profileImage}
