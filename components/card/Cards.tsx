@@ -1,7 +1,9 @@
-import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import React, {useState} from "react";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import ModalPop from "../modals/ModalPop";
 import UseModal from "@/hooks/modalHook";
+import { motion  } from "framer-motion"
+
 type Props = {
   // handleClose?: () => void;
   // openModal: boolean;
@@ -15,6 +17,7 @@ type Props = {
   ending?: string;
   time?: string;
   amount?: string;
+  id?:number
   handleClick?: () => void;
 
   // image: ,
@@ -23,6 +26,7 @@ type Props = {
 const Cards = (props: Props) => {
   const {
     // handleClick,
+   id,
     title,
     displayImage,
     profileImage,
@@ -34,7 +38,6 @@ const Cards = (props: Props) => {
     amount,
   } = props;
   const {handleClose, handleOpen, openModal} = UseModal();
-
   return (
 <>
     <Box
@@ -47,7 +50,9 @@ const Cards = (props: Props) => {
       py={2}
       onClick={handleOpen}
     >
-      <Stack spacing={2}>
+          
+      <Stack spacing={2}
+    >
         <Box
           sx={{
             display: "flex",
@@ -58,6 +63,7 @@ const Cards = (props: Props) => {
           }}
           
         >
+       
           <Typography sx={{ color: "#fff" }}>{title}</Typography>
           <Stack direction="row" spacing={1} alignItems="center" >
             {profileImage}
@@ -67,6 +73,7 @@ const Cards = (props: Props) => {
         {displayImage}
         <Stack direction="row" justifyContent={'space-between'} sx={{color:'#fff', width:'100%'}} spacing={2}>
           <Box>
+            <Typography>Broker:</Typography>
             <Typography>{broker}</Typography>
           </Box>
           <Box>
@@ -78,10 +85,23 @@ const Cards = (props: Props) => {
             <Typography>{time}</Typography>
           </Box>
         </Stack>
+        <motion.div  whileHover={{ scale: 0.9 }}
+                       whileTap={{ scale: 0.7 }}
+                       >
+
+        <Button 
+      onClick={handleOpen}
+      sx={{ background:
+                                "linear-gradient(220deg, #769593 10%, #ECB211 50%)",
+                              color: "#eee",
+
+                              px:3,
+                              fontSize:'20px', fontWeight:'600'}}>Place a bid</Button>
+                       </motion.div>
       </Stack>
 
     </Box>
-<ModalPop openModal={openModal} handleClose={handleClose} title={title} />
+<ModalPop openModal={openModal} handleClose={handleClose}  title={title} />
 </>
   );
 };

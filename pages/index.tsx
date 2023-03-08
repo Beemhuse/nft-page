@@ -1,11 +1,13 @@
+import React from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Homepage from '@/components/pages/Homepage'
-
-const inter = Inter({ subsets: ['latin'] })
-
+import {data} from "../data"
 export default function Home() {
+  // console.log(address)
+  // const [data, setData] = React.useState([]);
+//  console.log(data)
   return (
     <>
       <Head>
